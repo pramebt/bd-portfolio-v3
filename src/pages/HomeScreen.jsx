@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Textcenter from '../components/hero/Textcenter'
 const HomeScreen = () => {
   return (
-    <div>
-      <h1>HomeScreen</h1>
+    <div className='flex flex-col items-center justify-center h-screen '>
+      <Textcenter />
     </div>
   )
 }
