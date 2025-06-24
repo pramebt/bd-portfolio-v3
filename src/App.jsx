@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <div className=' px-16 md:px-20 '>
+      <div className=' px-8 md:px-20 lg:px-40 '>
         <HomeScreen />
         <AboutScreen />
       </div>

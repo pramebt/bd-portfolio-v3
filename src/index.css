@@ -4,13 +4,17 @@
 * {
     font-family: 'Inter', sans-serif;
 }
+/* Scroll smooth */
+html {
+  scroll-behavior: smooth;
+}
 
 .vt323-regular {
   font-family: "VT323", monospace;
 }
 
 /* Navbar Hover Effect */
-.nav-link {
+  .nav-link {
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -49,3 +53,5 @@
       opacity: 0;
     }
   }
+
+  
