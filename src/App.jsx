@@ -4,6 +4,7 @@ import './index.css';
 import HomeScreen from './pages/HomeScreen'
 import AboutScreen from './pages/AboutScreen'
 import ExperienceScreen from './pages/ExperienceScreen'
+import ProjectScreen from './pages/ProjectScreen'
 const App = () => {
   return (
     <>
@@ -12,6 +13,7 @@ const App = () => {
         <HomeScreen />
         <AboutScreen />
         <ExperienceScreen />
+        <ProjectScreen />
       </div>
     </>
   )
