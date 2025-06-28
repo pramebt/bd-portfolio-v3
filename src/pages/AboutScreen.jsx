@@ -21,7 +21,7 @@ const AboutScreen = () => {
             header="BANDIT KAEWNOI"
             param="I'm a recent graduate passionate about front-end development, eager to learn through hands-on projects and collaboration. I aim to develop my skills and contribute to impactful outcomes, preparing for a successful career as a Web Developer."
           />
-          <button className='mt-4 bg-white text-black px-4 py-2 rounded-md border-1 border-gray-400'>RESUME</button>
+          <button class="btn w-64 rounded-full">Button</button>
         </div>
       </div>
       <Techstack />
