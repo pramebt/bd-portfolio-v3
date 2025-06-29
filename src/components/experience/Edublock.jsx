@@ -1,10 +1,15 @@
 import React from 'react';
 
 const Edublock = ({ icon, title, items }) => (
-  <div className="flex-1 flex flex-col items-center">
-    {/* Icon + Title */}
-    <div className="flex items-center mb-2">
-      <img src={icon} alt={title} className="w-10 h-10 mr-2" />
+  <div className="flex-1 flex flex-col">
+    {/* Icon + Title (icon อยู่บน timeline) */}
+    <div className="flex flex-row items-center mb-2">
+      {/* Timeline + Icon */}
+      <div className="flex flex-col items-center mr-4 w-10">
+        <img src={icon} alt={title} className="w-8 h-8 mb-1" />
+        <div className="flex-1 w-0.5 bg-gray-400" />
+      </div>
+      {/* Title */}
       <span className="font-bold text-2xl">{title}</span>
     </div>
     {/* Timeline + Card(s) */}
