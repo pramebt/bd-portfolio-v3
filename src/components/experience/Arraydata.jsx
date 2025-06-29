@@ -8,11 +8,7 @@ const exp = [
     org: "Forth Smart Service Public Co., Ltd.",
     position: "Web Developer (Intern)",
   },
-  {
-    date: "May 2024 - June 2024",
-    org: "Forth Smart Service Public Co., Ltd.",
-    position: "Web Developer (Intern)",
-  },
+  
   // เพิ่มได้อีก
 ];
 
@@ -26,7 +22,7 @@ const edu = [
 ];
 
 const Arraydata = () => (
-  <div className="w-full max-w-6xl flex flex-col md:flex-row gap-8 mt-8 px-2 sm:px-4">
+  <div className="w-full flex flex-col md:flex-row gap-8 mt-8">
     <Expblock
       icon="/assets/icons/exp.svg"
       title="WORK EXPERIENCE"

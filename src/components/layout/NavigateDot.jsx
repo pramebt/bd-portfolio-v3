@@ -32,7 +32,7 @@ const NavigateDot = () => {
   }, []);
 
   return (
-    <div className="hidden md:flex flex-col gap-4 fixed right-6 top-1/2 -translate-y-1/2 z-50">
+    <div className="hidden lg:flex flex-col gap-4 fixed right-6 top-1/2 -translate-y-1/2 z-50">
       {sections.map((section) => (
         <div
           key={section.id}
