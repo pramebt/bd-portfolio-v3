@@ -33,10 +33,10 @@ const ProjectMap = () => {
       {projects.map((project, idx) => (
         <div
           key={idx}
-          className="bg-white rounded-xl shadow p-6 flex flex-col"
+          className="bg-white/30 backdrop-blur-xl border border-white/20 rounded-xl shadow-lg p-6 flex flex-col hover:bg-white/40 hover:shadow-xl transition-all duration-300"
         >
           {/* Image */}
-          <div className="aspect-[16/9] w-full bg-gray-100 rounded-xl overflow-hidden shadow mb-4">
+          <div className="aspect-[16/9] w-full bg-white/20 backdrop-blur rounded-xl overflow-hidden shadow-sm mb-4">
             <img
               src={project.img}
               alt={project.title}
@@ -56,7 +56,7 @@ const ProjectMap = () => {
               {project.tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="bg-gray-200 text-xs px-2 py-1 rounded"
+                  className="bg-white/30 backdrop-blur text-xs px-2 py-1 rounded border border-white/20"
                 >
                   {tag}
                 </span>
@@ -64,7 +64,7 @@ const ProjectMap = () => {
             </div>
             <a
               href="#"
-              className="mt-4 font-bold underline underline-offset-4 w-fit"
+              className="mt-4 font-bold text-black/80 hover:text-black underline underline-offset-4 w-fit transition-colors duration-200"
             >
               see project
             </a>
