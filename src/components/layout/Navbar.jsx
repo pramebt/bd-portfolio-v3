@@ -16,19 +16,12 @@ const sections = [
 const Navbar = () => {
   const [active, setActive] = useState("#home");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [projectsDropdownOpen, setProjectsDropdownOpen] = useState(false);
   const location = useLocation();
   
   const menuVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: -10 },
-  };
-
-  const dropdownVariants = {
-    hidden: { opacity: 0, y: -10, scale: 0.95 },
-    visible: { opacity: 1, y: 0, scale: 1 },
-    exit: { opacity: 0, y: -10, scale: 0.95 },
   };
 
   useEffect(() => {
@@ -57,18 +50,6 @@ const Navbar = () => {
       setActive(""); // Clear active state for other pages
     }
   }, [location.pathname]);
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (!event.target.closest('.projects-dropdown')) {
-        setProjectsDropdownOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
 
   return (
     <>
@@ -105,47 +86,16 @@ const Navbar = () => {
               >
                 experience
               </a>
-              
-              {/* Projects Dropdown */}
-              <div className="relative projects-dropdown">
-                <button
-                  className={`nav-link text-black ${
-                    active === "#projects" ? "active" : ""
-                  }`}
-                  onClick={() => setProjectsDropdownOpen(!projectsDropdownOpen)}
-                >
-                  projects
-                </button>
-                
-                <AnimatePresence>
-                  {projectsDropdownOpen && (
-                    <motion.div
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
-                      variants={dropdownVariants}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 mt-3 bg-white rounded-xl shadow-xl border border-gray-200 py-3 min-w-[180px] z-50 backdrop-blur-sm"
-                    >
-                      <div className="px-1">
-                        <Link
-                          to="/all-projects"
-                          className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-blue-50  rounded-lg transition-all duration-200 mx-1 relative overflow-hidden group"
-                          onClick={() => {
-                            setProjectsDropdownOpen(false);
-                            setMenuOpen(false);
-                          }}
-                        >
-                          <span className="nav-link font-medium relative">
-                            All Projects
-                          </span>
-                        </Link>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-              
+              {/* Removed Projects Dropdown */}
+              <a
+                href="#projects"
+                className={`nav-link text-black ${
+                  active === "#projects" ? "active" : ""
+                }`}
+                onClick={() => setMenuOpen(false)}
+              >
+                projects
+              </a>
               <a
                 href="#contact"
                 className={`nav-link text-black ${
@@ -188,9 +138,7 @@ const Navbar = () => {
                 <a href="#projects" className="nav-link text-black">
                   projects
                 </a>
-                <Link to="/all-projects" className="nav-link text-black pl-8">
-                  all projects
-                </Link>
+              
                 <a href="#contact" className="nav-link text-black">
                   contact
                 </a>

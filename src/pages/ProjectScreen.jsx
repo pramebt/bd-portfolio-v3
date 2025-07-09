@@ -10,7 +10,7 @@ const ProjectScreen = () => {
         <Header text="projects"/>
         <Link 
           to="/all-projects" 
-          className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center gap-2"
+          className="bg-white/30 backdrop-blur-xl border border-white/20 text-black px-6 py-2 rounded-lg hover:bg-white/50 hover:shadow-lg transition-all duration-300 flex items-center gap-2"
         >
           View All Projects
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
