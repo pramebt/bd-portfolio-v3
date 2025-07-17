@@ -3,7 +3,7 @@ import Textcenter from '../components/hero/Textcenter'
 
 const HomeScreen = () => {
   return (
-    <div id='home' className='flex flex-col items-center justify-center h-screen '>
+    <div id='home' className='w-full flex flex-col items-center justify-center h-screen '>
       <Textcenter />
       <div className="mt-8 mb-8 animate-bounce">
         {/* ลูกศรตัว v */}
