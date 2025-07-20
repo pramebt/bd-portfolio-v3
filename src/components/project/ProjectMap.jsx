@@ -21,6 +21,7 @@ const projects = [
     link: "https://blog-bd.vercel.app/",
     github: "https://github.com/pramebt/webblogbd",
   },
+  
   {
     title: "Weather App",
     subtitle: "personal project",
@@ -31,10 +32,27 @@ const projects = [
     github: "https://github.com/pramebt/weather-app",
   },
   {
+    title: "Lawyer - Landing Page",
+    subtitle: "Professional project",
+    desc: "Landing page for lawyer",
+    img: "/assets/images/project/lawyer.png",
+    tags: ["React", "Tailwind", "Javascript"],
+    link: "https://lawyers-landingpage.vercel.app/",
+  },
+  {
     title: "Portfolio",
     subtitle: "personal project",
     desc: "Portfolio website for myself",
     img: "/assets/images/project/portv3.png",
+    tags: ["React", "Tailwind", "Javascript"],
+    link: "https://bd-portfolio-v3.vercel.app/",
+    github: "https://github.com/pramebt/bd-portfolio-v3",
+  },
+  {
+    title: "Portfolio",
+    subtitle: "personal project",
+    desc: "Portfolio website for myself",
+    img: "/assets/images/project/portv2.png",
     tags: ["Nextjs", "Tailwind", "Typescript"],
     link: "https://bd-portfolio-real.vercel.app/",
   },
@@ -199,15 +217,16 @@ const ProjectMap = ({ showAll = false }) => {
                 >
                   View Live
                 </a>
-                <a
-                  href={selectedProject.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black/90 text-white px-6 py-2 rounded-lg shadow-sm hover:bg-black transition-colors duration-200 font-medium"
-                >
-                  Github
-                </a>
-                
+                {selectedProject.github && (
+                  <a
+                    href={selectedProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-black/90 text-white px-6 py-2 rounded-lg shadow-sm hover:bg-black transition-colors duration-200 font-medium"
+                  >
+                    Github
+                  </a>
+                )}
               </div>
             </div>
           </div>
