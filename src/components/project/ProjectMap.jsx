@@ -32,7 +32,7 @@ const projects = [
   },
   {
     title: "2carrent - Car Rental",
-    subtitle: "Professional project",
+    subtitle: "professional project",
     desc: "A website for car rental services.Responsibilities included implementing multilingual support (English and Chinese),UI improvements, and data integration for car listings and hot dealsacross both the main website and the back office system.Additionally, developed the login system for the back office to manage access control and security.",
     img: "/assets/images/project/2carrent.png",
     tags: ["Nextjs", "Tailwind", "Javascript", "Nodejs", "Express", "Mysql"],
@@ -40,7 +40,7 @@ const projects = [
   },
   {
     title: "Lawyer - Landing Page",
-    subtitle: "Professional project",
+    subtitle: "professional project",
     desc: "A modern landing page for a lawyer or law firm, designed to build trust and provide key information about legal services.The website includes a built-in AI-powered chatbot that allows visitors to ask legal-related questions and receive instant responses.The AI chat system is designed to simulate initial legal consultation, helping users understand their situation before contacting a real lawyer.This project combines elegant UI/UX with smart technology to improve client interaction and accessibility.",
     img: "/assets/images/project/lawyer.png",
     tags: ["React", "Tailwind", "Javascript"],
