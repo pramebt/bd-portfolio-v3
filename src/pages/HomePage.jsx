@@ -3,6 +3,7 @@ import HomeScreen from './HomeScreen'
 import AboutScreen from './AboutScreen'
 import ExperienceScreen from './ExperienceScreen'
 import ProjectScreen from './ProjectScreen'
+import ContactScreen from './ContactScreen'
 
 const HomePage = () => {
   return (
@@ -11,6 +12,9 @@ const HomePage = () => {
         <AboutScreen />
         <ExperienceScreen />
         <ProjectScreen />
+        <ContactScreen />
+      
+    
     </div>
   )
 }
