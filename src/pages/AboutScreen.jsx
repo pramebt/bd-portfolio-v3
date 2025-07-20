@@ -30,16 +30,14 @@ const AboutScreen = () => {
             header="BANDIT KAEWNOI"
             param="I'm a recent graduate passionate about front-end development, eager to learn through hands-on projects and collaboration. I aim to develop my skills and contribute to impactful outcomes, preparing for a successful career as a Web Developer."
           />
-          <div className='flex items-center justify-center gap-2  w-64 rounded-full text-center bg-white/30 backdrop-blur-xl border border-white/20 text-black text-lg font-semibold py-3 shadow-sm hover:shadow-xl hover:bg-white/40 transition-all duration-300'>
+          <div className='flex items-center justify-center gap-2  w-42 rounded-full text-center bg-white/30 backdrop-blur-xl border border-white/20 text-black text-lg font-semibold py-3 shadow-sm hover:shadow-xl hover:bg-white/40 transition-all duration-300'>
           <a 
             href="/assets/BD RESUME.pdf" 
             download 
             className='w-full flex items-center justify-center gap-2'
             
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M7.5 12l4.5 4.5m0 0l4.5-4.5m-4.5 4.5V3" />
-            </svg>
+            <img src="/assets/icons/downloading.png" alt="download" className='w-6 h-6' />
             Resume
           </a>
           </div>

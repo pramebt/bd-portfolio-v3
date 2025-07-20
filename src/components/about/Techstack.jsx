@@ -2,22 +2,22 @@ import React from 'react'
 
 const skills = [
   {
-    icon: "/assets/icons/front-end.svg",
+    icon: "/assets/icons/front-end.png",
     title: "Front - end",
     items: ["JavaScript", "TypeScript", "React", "React Native", "Next.js", "Tailwind CSS"],
   },
   {
-    icon: "/assets/icons/back-end.svg",
+    icon: "/assets/icons/back-end.png",
     title: "Back - end",
     items: ["Node.js", "Express", "MySQL"],
   },
   {
-    icon: "/assets/icons/deploy.svg",
+    icon: "/assets/icons/deploy.png",
     title: "Deploy",
     items: ["Vercel", "Railway"],
   },
   {
-    icon: "/assets/icons/tool.svg",
+    icon: "/assets/icons/tools.png",
     title: "Tool",
     items: ["VSCode", "Figma", "Git","GitHub","Cursor"],
   },

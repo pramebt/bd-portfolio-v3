@@ -33,12 +33,12 @@ const edu = [
 const Arraydata = () => (
   <div className="w-full flex flex-col md:flex-row gap-8 mt-8">
     <Expblock
-      icon="/assets/icons/exp.svg"
+      icon="/assets/icons/exp.png"
       title="WORK EXPERIENCE"
       items={exp}
     />
     <Edublock
-      icon="/assets/icons/education.svg"
+      icon="/assets/icons/edu.png"
       title="EDUCATION"
       items={edu}
     />

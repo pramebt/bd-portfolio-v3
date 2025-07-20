@@ -6,7 +6,7 @@ const Edublock = ({ icon, title, items }) => (
     <div className="flex flex-row items-center mb-2">
       {/* Timeline + Icon */}
       <div className="flex flex-col items-center mr-4 w-10">
-        <img src={icon} alt={title} className="w-8 h-8 mb-1" />
+        <img src={icon} alt={title} className="w-9 h-9 mb-1" />
         <div className="flex-1 w-0.5 bg-gray-400" />
       </div>
       {/* Title */}
