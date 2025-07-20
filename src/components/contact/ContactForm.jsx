@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { toast } from 'react-toastify'
 const ContactForm = ({ setResult, setShowAlert }) => {
     const [formData, setFormData] = useState({
         name: '',
@@ -39,9 +39,7 @@ const ContactForm = ({ setResult, setShowAlert }) => {
         setErrors(newErrors);
     
         if (Object.values(newErrors).includes(true)) {
-          setResult("❌ Please fix the highlighted fields.");
-          setShowAlert(true);
-          setTimeout(() => setShowAlert(false), 3000);
+          toast.error("Please fix the highlighted fields.");
           return;
         }
     
@@ -56,15 +54,14 @@ const ContactForm = ({ setResult, setShowAlert }) => {
         const data = await response.json();
     
         if (data.success) {
-          setResult("✅ Form submitted successfully!");
+            toast.success("Form submitted successfully!");
           form.reset();
           setErrors({ name: false, email: false, message: false });
         } else {
-          setResult(`❌ ${data.message}`);
+          toast.error(data.message);
         }
     
-        setShowAlert(true);
-        setTimeout(() => setShowAlert(false), 3000);
+       
       };
     
     return (
