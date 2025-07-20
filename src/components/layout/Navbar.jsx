@@ -119,7 +119,7 @@ const Navbar = () => {
                 exit="exit"
                 variants={menuVariants}
                 transition={{ duration: 0.3 }}
-                className="absolute top-18 left-0 w-full  bg-white/70 backdrop-blur-3xl  flex flex-col items-center space-y-4 py-4 md:hidden z-50"
+                className="absolute top-18 left-0 w-full  bg-white flex flex-col items-center space-y-4 py-4 md:hidden z-50"
               >
                 <Link
                   to="/"

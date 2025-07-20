@@ -22,8 +22,11 @@ const Edublock = ({ icon, title, items }) => (
       {/* Cards */}
       <div className="flex flex-col gap-4 w-full">
         {items.map((item, idx) => (
-          <div key={idx} className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 min-w-0 w-full max-w-full shadow-sm flex flex-col justify-center">
-            <div className="text-gray-400 mb-1">{item.date}</div>
+          <div key={idx} className="bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-5 sm:p-6 min-w-0 w-full max-w-full  hover:shadow-xl transition-all duration-300 flex flex-col justify-center group">
+            <div className="flex items-center justify-between mb-3">
+              <div className="text-gray-500 text-sm font-medium bg-gray-100/50 px-3 py-1 rounded-full">{item.date}</div>
+              <img src={item.cardIcon} alt="Company" className="w-10 h-10 opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
             <div className="font-bold text-xl mb-1">{item.org}</div>
             <div className="text-gray-600">{item.position}</div>
           </div>

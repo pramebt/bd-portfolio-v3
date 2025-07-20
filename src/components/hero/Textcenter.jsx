@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const words = ['Front end', 'Back end', 'Web'];
+const words = ['Front end', 'Web'];
 
 const Textcenter = () => {
   const [wordIndex, setWordIndex] = useState(0);

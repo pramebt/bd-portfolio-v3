@@ -13,6 +13,8 @@ const HomePage = () => {
         <ExperienceScreen />
         <ProjectScreen />
         <ContactScreen />
+      
+    
     </div>
   )
 }

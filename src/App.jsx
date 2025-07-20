@@ -1,8 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 import "./index.css";
 import HomePage from "./pages/HomePage";
+import LayoutScreen from "./pages/LayoutScreen";
+
 
 
 
@@ -22,9 +25,10 @@ const App = () => {
       {/* Scrollable Content */}
       <div className="relative min-h-screen">
         <Router>
-          <Navbar />
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<LayoutScreen />}>
+              <Route index element={<HomePage />} />
+            </Route>
           </Routes>
         </Router>
       </div>
