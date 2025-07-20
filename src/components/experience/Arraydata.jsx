@@ -8,8 +8,14 @@ const exp = [
     org: "Forth Smart Service Public Co., Ltd.",
     position: "Web Developer (Intern)",
     cardIcon: "/assets/icons/forth-logo.png",
-    datail: "Designed the database system and customized both the front-end and back-end of the website using HTML, CSS, JavaScript and PHP. Ensured that data added by the admin was dynamically displayed on the user interface for seamless user access. Modified and improved the system based on requests from other departments, including fetching data to display on the UI and adding new menus and features to the website."
+    detail: "Designed the database system and customized both the front-end and back-end of the website using HTML, CSS, JavaScript and PHP. Ensured that data added by the admin was dynamically displayed on the user interface for seamless user access. Modified and improved the system based on requests from other departments, including fetching data to display on the UI and adding new menus and features to the website."
   },
+  {
+    date: "Jun 2025 - July 2025",
+    org: "Freelance",
+    position: "Web Developer",
+    detail: "Freelance Project using React, React-Native, and Nextjs. Includes creating demo app such as ride-hailing. Also developed web platforms for car rental,lawyer landing page and backoffice systems for mentioned apps and websites."
+  }
   
   // เพิ่มได้อีก
 ];

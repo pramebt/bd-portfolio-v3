@@ -3,15 +3,6 @@ import AOS from "aos";
 import { div } from "framer-motion/client";
 const projects = [
   {
-    title: "Age Calculator",
-    subtitle: "personal project",
-    desc: "Calculate age from day, month, year (AD) Responsive for mobile and pc",
-    img: "/assets/images/project/Age-cal.png",
-    tags: ["Nextjs", "Tailwind", "Typescript"],
-    link: "https://age-calculator-bd.vercel.app/",
-    github: "https://github.com/pramebt/age-calculator",
-  },
-  {
     title: "BLOD - Webblog",
     subtitle: "personal project",
     desc: "This website is designed for writing and managing blog posts,allowing users to create content flexibly using a block-based structure such as headers, paragraphs, code blocks, and images. This gives users the freedom to organize and customize their content with ease. In addition to creating blog posts, users can also save and manage multiple projects within the system, making it ideal for organizing writing tasks or development-related projects. This project was developed to practice building complex React applications, handling dynamic and flexible form structures, integrating with a backend system, uploading files to Cloudinary, and storing structured data in a real database.",
@@ -20,6 +11,15 @@ const projects = [
     tags: ["React", "Tailwind", "Nodejs", "Express","Mysql","TiDB"],
     link: "https://blog-bd.vercel.app/",
     github: "https://github.com/pramebt/webblogbd",
+  },
+  {
+    title: "Age Calculator",
+    subtitle: "personal project",
+    desc: "Calculate age from day, month, year (AD) Responsive for mobile and pc",
+    img: "/assets/images/project/Age-cal.png",
+    tags: ["Nextjs", "Tailwind", "Typescript"],
+    link: "https://age-calculator-bd.vercel.app/",
+    github: "https://github.com/pramebt/age-calculator",
   },
   {
     title: "Weather App",
@@ -31,10 +31,35 @@ const projects = [
     github: "https://github.com/pramebt/weather-app",
   },
   {
+    title: "2carrent - Car Rental",
+    subtitle: "Professional project",
+    desc: "A website for car rental services.Responsibilities included implementing multilingual support (English and Chinese),UI improvements, and data integration for car listings and hot dealsacross both the main website and the back office system.Additionally, developed the login system for the back office to manage access control and security.",
+    img: "/assets/images/project/2carrent.png",
+    tags: ["Nextjs", "Tailwind", "Javascript", "Nodejs", "Express", "Mysql"],
+    link: "https://2carrent.com/",
+  },
+  {
+    title: "Lawyer - Landing Page",
+    subtitle: "Professional project",
+    desc: "A modern landing page for a lawyer or law firm, designed to build trust and provide key information about legal services.The website includes a built-in AI-powered chatbot that allows visitors to ask legal-related questions and receive instant responses.The AI chat system is designed to simulate initial legal consultation, helping users understand their situation before contacting a real lawyer.This project combines elegant UI/UX with smart technology to improve client interaction and accessibility.",
+    img: "/assets/images/project/lawyer.png",
+    tags: ["React", "Tailwind", "Javascript"],
+    link: "https://lawyers-landingpage.vercel.app/",
+  },
+  {
     title: "Portfolio",
     subtitle: "personal project",
     desc: "Portfolio website for myself",
     img: "/assets/images/project/portv3.png",
+    tags: ["React", "Tailwind", "Javascript"],
+    link: "https://bd-portfolio-v3.vercel.app/",
+    github: "https://github.com/pramebt/bd-portfolio-v3",
+  },
+  {
+    title: "Portfolio",
+    subtitle: "personal project",
+    desc: "Portfolio website for myself",
+    img: "/assets/images/project/portv2.png",
     tags: ["Nextjs", "Tailwind", "Typescript"],
     link: "https://bd-portfolio-real.vercel.app/",
   },
@@ -199,15 +224,16 @@ const ProjectMap = ({ showAll = false }) => {
                 >
                   View Live
                 </a>
-                <a
-                  href={selectedProject.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black/90 text-white px-6 py-2 rounded-lg shadow-sm hover:bg-black transition-colors duration-200 font-medium"
-                >
-                  Github
-                </a>
-                
+                {selectedProject.github && (
+                  <a
+                    href={selectedProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-black/90 text-white px-6 py-2 rounded-lg shadow-sm hover:bg-black transition-colors duration-200 font-medium"
+                  >
+                    Github
+                  </a>
+                )}
               </div>
             </div>
           </div>
