@@ -79,7 +79,7 @@ const ContactForm = ({ setResult, setShowAlert }) => {
             <div className="flex gap-6 mt-8 mb-12">
                 {/* Facebook */}
                 <a 
-                    href="https://facebook.com" 
+                    href="https://www.facebook.com/bandit.prame/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-12 h-12 flex items-center justify-center bg-white/30 backdrop-blur-xl border border-white/20 rounded-xl hover:bg-white/50 hover:shadow-lg transition-all duration-300"
@@ -89,7 +89,7 @@ const ContactForm = ({ setResult, setShowAlert }) => {
 
                 {/* Instagram */}
                 <a 
-                    href="https://instagram.com" 
+                    href="https://www.instagram.com/prame.bt/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-12 h-12 flex items-center justify-center bg-white/30 backdrop-blur-xl border border-white/20 rounded-xl hover:bg-white/50 hover:shadow-lg transition-all duration-300"
@@ -99,7 +99,7 @@ const ContactForm = ({ setResult, setShowAlert }) => {
 
                 {/* GitHub */}
                 <a 
-                    href="https://github.com" 
+                    href="https://github.com/pramebt" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-12 h-12 flex items-center justify-center bg-white/30 backdrop-blur-xl border border-white/20 rounded-xl hover:bg-white/50 hover:shadow-lg transition-all duration-300"

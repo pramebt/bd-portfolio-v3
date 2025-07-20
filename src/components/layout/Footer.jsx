@@ -41,7 +41,7 @@ const Footer = () => {
         {/* Social media links */}
         <div className="flex space-x-4 mt-4 md:mt-0 bg-white backdrop-blur-xl px-4 py-4 rounded-3xl">
           
-          <a href="https://www.facebook.com/bdforwork" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/bandit.prame/" target="_blank" rel="noopener noreferrer">
             <img
               src="/assets/icons/facebook.png" 
               alt="Facebook"
@@ -50,7 +50,7 @@ const Footer = () => {
               className='w-8'
             />
           </a>
-          <a href="https://www.instagram.com/bdforwork/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/prame.bt/" target="_blank" rel="noopener noreferrer">
             <img
               src="/assets/icons/instagram.png" 
               alt="Instagram"
@@ -59,7 +59,7 @@ const Footer = () => {
               className='w-8'
             />
           </a>
-          <a href="https://www.linkedin.com/company/bdforwork/" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/pramebt" target="_blank" rel="noopener noreferrer">
             <img
               src="/assets/icons/github.png" 
               alt="LinkedIn"
