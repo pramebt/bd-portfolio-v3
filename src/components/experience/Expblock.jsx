@@ -32,7 +32,13 @@ const Expblock = ({ icon, title, items }) => {
       {/* Cards */}
       <div className="flex flex-col gap-4 w-full">
         {items.map((item, idx) => (
-          <div key={idx} className="bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-5 sm:p-6 min-w-0 w-full max-w-full hover:shadow-xl transition-all duration-300 flex flex-col justify-center group">
+          <div 
+            key={idx} 
+            onClick={() => item.detail && toggleItem(idx)}
+            className={`bg-white/80 backdrop-blur-sm border border-gray-200/50 rounded-2xl p-5 sm:p-6 min-w-0 w-full max-w-full hover:shadow-xl transition-all duration-300 flex flex-col justify-center group ${
+              item.detail ? 'cursor-pointer' : ''
+            }`}
+          >
             <div className="flex items-center justify-between mb-3">
               <div className="text-gray-500 text-sm font-medium bg-gray-100/50 px-3 py-1 rounded-full">{item.date}</div>
               {item.cardIcon && (
@@ -43,10 +49,7 @@ const Expblock = ({ icon, title, items }) => {
             <div className="text-gray-600 leading-relaxed">{item.position}</div>
             {item.detail && (
               <div className="mt-3">
-                <button
-                  onClick={() => toggleItem(idx)}
-                  className="flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
-                >
+                <div className="flex items-center gap-2  font-medium">
                   <svg
                     className={`w-4 h-4 transition-transform duration-200 ${expandedItems[idx] ? 'rotate-90' : ''}`}
                     fill="none"
@@ -55,7 +58,8 @@ const Expblock = ({ icon, title, items }) => {
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </button>
+                  <span className="text-sm">{expandedItems[idx] ? 'Click to hide details' : 'Click to show details'}</span>
+                </div>
                 <div 
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${
                     expandedItems[idx] 
