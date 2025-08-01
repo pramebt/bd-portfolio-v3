@@ -3,6 +3,15 @@ import AOS from "aos";
 import { div } from "framer-motion/client";
 const projects = [
   {
+    title: "Scan2Order - Backoffice (In Progress)",
+    subtitle: "professional project",
+    desc: "This is a backoffice system for Scan2Order, a platform for managing orders and menus in restaurants. It is a professional project that was developed to practice building complex React applications, handling dynamic and flexible form structures, integrating with a backend system, and storing structured data in a real database.",      
+    img: "/assets/images/project/scanderadmin.png",
+    tags: ["React", "Tailwind", "Nodejs", "Express","Mysql"],
+    link: "https://scan2order-admin.vercel.app/",
+   
+  },
+  {
     title: "BLOD - Webblog",
     subtitle: "personal project",
     desc: "This website is designed for writing and managing blog posts,allowing users to create content flexibly using a block-based structure such as headers, paragraphs, code blocks, and images. This gives users the freedom to organize and customize their content with ease. In addition to creating blog posts, users can also save and manage multiple projects within the system, making it ideal for organizing writing tasks or development-related projects. This project was developed to practice building complex React applications, handling dynamic and flexible form structures, integrating with a backend system, uploading files to Cloudinary, and storing structured data in a real database.",
