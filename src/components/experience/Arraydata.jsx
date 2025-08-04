@@ -31,17 +31,26 @@ const edu = [
 ];
 
 const Arraydata = () => (
-  <div className="w-full flex flex-col md:flex-row gap-8 mt-8">
-    <Expblock
-      icon="/assets/icons/exp.png"
-      title="WORK EXPERIENCE"
-      items={exp}
-    />
-    <Edublock
-      icon="/assets/icons/edu.png"
-      title="EDUCATION"
-      items={edu}
-    />
+  <div className="w-full flex flex-col gap-12 mt-8">
+    {/* Work Experience Section */}
+    <div className="relative">
+      <div className="absolute -top-4 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-30"></div>
+      <Expblock
+        icon="/assets/icons/exp.png"
+        title="WORK EXPERIENCE"
+        items={exp}
+      />
+    </div>
+
+    {/* Education Section */}
+    <div className="relative">
+      <div className="absolute -top-4 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-teal-500 rounded-full opacity-30"></div>
+      <Edublock
+        icon="/assets/icons/edu.png"
+        title="EDUCATION"
+        items={edu}
+      />
+    </div>
   </div>
 );
 

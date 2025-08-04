@@ -3,13 +3,25 @@ import AOS from "aos";
 import { div } from "framer-motion/client";
 const projects = [
   {
-    title: "Scan2Order - Backoffice (In Progress)",
+    title: "Scan2Order - POS",
+    subtitle: "professional project",
+    desc: "This is a POS system of Scan2Order, for restaurant to order and pay for their food and drinks. It is a professional project that was developed to practice building complex React applications, handling dynamic and flexible form structures, integrating with a backend system, and storing structured data in a real database.",      
+    img: "/assets/images/project/posscan2order.png",
+    tags: ["Nextjs", "Tailwind", "Javascript"],
+  },
+  {
+    title: "Scan2Order - Landing Page",
+    subtitle: "professional project",
+    desc: "This is a landing page of Scan2Order, for sales and marketing of the POS system. It is a professional project that was developed to practice building complex Nextjs applications, handling dynamic and flexible form structures, integrating with a backend system, and storing structured data in a real database.",      
+    img: "/assets/images/project/ldscan2order.png",
+    tags: ["Nextjs", "Tailwind", "Javascript","Nodejs","Express","Mysql"],
+  },
+  {
+    title: "Scan2Order - Backoffice",
     subtitle: "professional project",
     desc: "This is a backoffice system for Scan2Order, a platform for managing orders and menus in restaurants. It is a professional project that was developed to practice building complex React applications, handling dynamic and flexible form structures, integrating with a backend system, and storing structured data in a real database.",      
     img: "/assets/images/project/scanderadmin.png",
     tags: ["React", "Tailwind", "Nodejs", "Express","Mysql"],
-    link: "https://scan2order-admin.vercel.app/",
-   
   },
   {
     title: "BLOD - Webblog",
@@ -58,7 +70,7 @@ const projects = [
   {
     title: "Portfolio",
     subtitle: "personal project",
-    desc: "Portfolio website for myself",
+    desc: "Portfolio website with React and Tailwind , and Javascript to keep track of my projects and skills",
     img: "/assets/images/project/portv3.png",
     tags: ["React", "Tailwind", "Javascript"],
     link: "https://bd-portfolio-v3.vercel.app/",
@@ -67,7 +79,7 @@ const projects = [
   {
     title: "Portfolio",
     subtitle: "personal project",
-    desc: "Portfolio website for myself",
+    desc: "Portfolio website with Nextjs and Tailwind , and Typescript to keep track of my projects and skills",
     img: "/assets/images/project/portv2.png",
     tags: ["Nextjs", "Tailwind", "Typescript"],
     link: "https://bd-portfolio-real.vercel.app/",
@@ -93,11 +105,19 @@ const projects = [
 
 ];
 
-const ProjectMap = ({ showAll = false }) => {
+const ProjectMap = ({ showAll = false, activeCategory = 'all' }) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   
-  const displayedProjects = showAll ? projects : projects.slice(0, 3);
+  // Filter projects based on category
+  const filteredProjects = projects.filter(project => {
+    if (activeCategory === 'all') return true;
+    if (activeCategory === 'professional') return project.subtitle === 'professional project';
+    if (activeCategory === 'personal') return project.subtitle === 'personal project';
+    return true;
+  });
+  
+  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
 
   useEffect(() => {
     AOS.init({
@@ -225,6 +245,7 @@ const ProjectMap = ({ showAll = false }) => {
               </div>
 
               <div className="flex gap-4 pt-4">
+              {selectedProject.link && (
                 <a
                   href={selectedProject.link}
                   target="_blank"
@@ -233,6 +254,7 @@ const ProjectMap = ({ showAll = false }) => {
                 >
                   View Live
                 </a>
+                )}
                 {selectedProject.github && (
                   <a
                     href={selectedProject.github}

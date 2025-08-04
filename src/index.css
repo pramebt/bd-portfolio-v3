@@ -149,5 +149,38 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
   }
+
+  /* Timeline Dotted Lines */
+  .timeline-dotted {
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 8px,
+      currentColor 8px,
+      currentColor 12px
+    );
+  }
+
+  .timeline-dotted-blue {
+    color: #3b82f6;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 6px,
+      currentColor 6px,
+      currentColor 10px
+    );
+  }
+
+  .timeline-dotted-green {
+    color: #10b981;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 6px,
+      currentColor 6px,
+      currentColor 10px
+    );
+  }
   
   
